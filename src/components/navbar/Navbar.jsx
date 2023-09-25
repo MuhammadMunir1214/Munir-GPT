@@ -24,9 +24,6 @@ const Menu = () => {
         </Link>
       </p>
       <p>
-        {/* <Link to="/pdf" target="_blank">
-          PDF Reader
-        </Link> */}
         <a
           href="https://munir-pdf.streamlit.app/"
           target="_blank"

@@ -207,7 +207,7 @@ footer {
   line-height: 40px;
   font-size: 20px;
   color: #fff;
-  background: #319f87;
+  background: var(--gradient-bar);
   margin-right: 15px;
   padding: 5px;
   cursor: pointer;
@@ -241,9 +241,9 @@ footer .copyright {
   overflow: hidden;
 }
 .bottom_line span {
-  width: 15px;
+  width: 20px;
   height: 100%;
-  background: #319f87;
+  background: var(--gradient-bar);
   border-radius: 3px;
   position: absolute;
   top: 0;
