@@ -39,7 +39,7 @@
   padding-right: 12px;
 }
 
-.chat-input {
+.chat-input-holder {
   padding: 24px;
   position: absolute;
   bottom: 0;
@@ -65,7 +65,7 @@
   text-align: left;
 }
 
-.chat-message-chatgpt {
+.chat-message.chatgpt {
   background-color: #444654;
 }
 
@@ -86,7 +86,7 @@
   height: 40px;
 }
 
-.avatar-chatgpt {
+.avatar.chatgpt {
   background: #000000;
   border-radius: 50%;
   width: 40px;
