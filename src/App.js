@@ -13,7 +13,6 @@ const App = () => {
       <WhatGPT3 />
       <Features />
       {/* <OpenAI /> */}
-      {/* <CTA /> */}
       {/* <Pdf /> */}
       <Footer />
     </div>
