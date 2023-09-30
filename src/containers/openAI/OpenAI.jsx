@@ -14,6 +14,19 @@ function OpenAI() {
     e.preventDefault();
     setChatLog([...chatLog, { user: "me", message: `${input}` }]);
     setInput("");
+
+    const response = await fetch("http://localhost:3000/openAI", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: chatLog.map((message) => message.message).join(""),
+      }),
+    });
+    const data = await response.json();
+    setChatLog([...chatLog, { user: "gpt", message: `${data.message}` }]);
+    console.log(data.message);
   }
 
   return (

@@ -1,27 +1,32 @@
-//   apiKey: "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",
 //   apiKey: process.env.OPENAI_API_KEY,
 
 const OpenAI = require("openai");
 const express = require("express");
 const { response } = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "",
 });
 
 const app = express();
-const port = 3080;
+app.use(bodyParser.json());
+app.use(cors());
+const port = 3000;
 
-app.post("/", async (req, res) => {
+app.post("/openAI", async (req, res) => {
+  const { message } = req.body;
+  console.log(message);
   const completion = await openai.completions.create({
     model: "gpt-3.5-turbo-instruct",
-    prompt: "Say this is a test.",
-    max_tokens: 7,
-    temperature: 0,
+    prompt: `${message}`,
+    max_tokens: 100,
+    temperature: 0.5,
   });
   console.log(completion);
   res.json({
-    data: completion,
+    message: completion.data.choices[0].text,
   });
 });
 
