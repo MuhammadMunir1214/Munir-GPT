@@ -18,8 +18,19 @@
 
 .chatbox {
   flex: 1;
-  background-color: #343541;
+  /* background-color: #343541; */
+  background: radial-gradient(
+    ellipse 90% 100% at center top,
+    #040c18 0%,
+    rgba(45, 107, 103, 1) 180%
+  );
   position: relative;
+  overflow: hidden;
+}
+
+.chat-log-container {
+  max-height: 800px;
+  overflow-y: auto;
 }
 
 .side-menu-button {
@@ -48,7 +59,7 @@
 }
 
 .chat-input-textarea {
-  background-color: #40414f;
+  background-color: rgba(45, 107, 103, 1);
   width: 90%;
   padding: 12px;
   color: white;
@@ -61,12 +72,16 @@
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.chat-input-textarea::placeholder {
+  color: #cecece;
+}
+
 .chat-log {
   text-align: left;
 }
 
 .chat-message.chatgpt {
-  background-color: #444654;
+  background-color: rgb(32, 75, 72);
 }
 
 .chat-message-center {
@@ -80,10 +95,11 @@
 }
 
 .avatar {
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  display: flex;
 }
 
 .avatar.chatgpt {
@@ -91,6 +107,7 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  display: flex;
 }
 
 .message {

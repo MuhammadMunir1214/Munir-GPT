@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const app = express();
@@ -17,14 +17,14 @@ const port = 3001;
 
 app.post("/openAI", async (req, res) => {
   const { message } = req.body;
-  console.log(message);
+  //   console.log(message);
   const completion = await openai.completions.create({
     model: "gpt-3.5-turbo-instruct",
     prompt: `${message}`,
     max_tokens: 1000,
     temperature: 0.5,
   });
-  console.log(completion);
+  //   console.log(completion);
   res.json({
     message: completion.choices[0].text,
   });

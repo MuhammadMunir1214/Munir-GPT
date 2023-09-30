@@ -1,19 +1,29 @@
 import React from "react";
 import "./OpenAI.css";
 import "./normal.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function OpenAI() {
   // useEffect(() => {
   //   getEngines();
   // }, []);
 
+  const chatLogContainerRef = useRef();
   const [input, setInput] = useState("");
   const [models, setModels] = useState([]);
   const [chatLog, setChatLog] = useState([
     { user: "gpt", message: "Hello, how can I help you today?" },
     // { user: "me", message: "What is 2+2" },
   ]);
+
+  const scrollToBottom = () => {
+    chatLogContainerRef.current.scrollTop =
+      chatLogContainerRef.current.scrollHeight;
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chatLog]);
 
   function clearChat() {
     setChatLog([]);
@@ -66,10 +76,12 @@ function OpenAI() {
         </div> */}
       </aside>
       <section className="chatbox">
-        <div className="chat-log">
-          {chatLog.map((message, index) => (
-            <ChatMessage key={index} message={message} />
-          ))}
+        <div className="chat-log-container" ref={chatLogContainerRef}>
+          <div className="chat-log">
+            {chatLog.map((message, index) => (
+              <ChatMessage key={index} message={message} />
+            ))}
+          </div>
         </div>
         <div className="chat-input-holder">
           <form onSubmit={handleSubmit}>
