@@ -111,8 +111,9 @@
 }
 
 .message {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 2em;
 }
 
 /* .App-logo {

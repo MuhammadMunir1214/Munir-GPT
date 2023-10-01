@@ -1,13 +1,12 @@
-//   apiKey: process.env.OPENAI_API_KEY,
-
+require("dotenv").config({ path: ".env.gpt" });
+const cors = require("cors");
 const OpenAI = require("openai");
 const express = require("express");
 const { response } = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const app = express();
