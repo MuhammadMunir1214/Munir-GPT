@@ -13,12 +13,12 @@ const featuresData = [
     text: "Upload your own PDF files for analysis and ask specific questions about the document's content and gain valuable insights.",
   },
   {
-    title: "Smart Language Comprehension",
-    text: "Experience Munir-GPT's sophisticated language comprehension capabilities. From improving end distrusts instantly to generating precise and meaningful responses.",
-  },
-  {
     title: "Unlock a New AI Horizon",
     text: "Embark on a journey into the next frontier of AI technology hub with Munir GPT. Experience a spectrum of cutting-edge AI services, all effortlessly accessible through API keys.",
+  },
+  {
+    title: "Image Generation",
+    text: "Generate images based on text inputs (COMING SOON!)",
   },
 ];
 

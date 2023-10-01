@@ -8,19 +8,20 @@ function OpenAI() {
   //   getEngines();
   // }, []);
 
-  const chatLogContainerRef = useRef();
-  const [input, setInput] = useState("");
+  const chatLogContainerRef = useRef(); // Ref to scroll to the bottom of the chat log
+  const [input, setInput] = useState(""); // State to manage user input
   const [models, setModels] = useState([]);
   const [chatLog, setChatLog] = useState([
-    { user: "gpt", message: "Hello, how can I help you today?" },
-    // { user: "me", message: "What is 2+2" },
+    { user: "gpt", message: "Hello, how can I help you today?" }, // State to manage the chat log
   ]);
 
+  // Function to scroll to the bottom of the chat log
   const scrollToBottom = () => {
     chatLogContainerRef.current.scrollTop =
       chatLogContainerRef.current.scrollHeight;
   };
 
+  // Scroll to the bottom whenever the chat log changes
   useEffect(() => {
     scrollToBottom();
   }, [chatLog]);
@@ -35,6 +36,7 @@ function OpenAI() {
   //     .then((data) => setModels(data.models.data));
   // }
 
+  // Function to handle user input
   async function handleSubmit(e) {
     e.preventDefault();
     let chatLogNew = [...chatLog, { user: "me", message: `${input}` }];
@@ -42,8 +44,10 @@ function OpenAI() {
 
     setChatLog(chatLogNew);
 
+    // Combine chat messages into a single string
     const messages = chatLogNew.map((message) => message.message).join("\n");
 
+    // Send user's input to the server and receive a response
     const response = await fetch("http://localhost:3001/openAI", {
       method: "POST",
       headers: {
@@ -53,6 +57,8 @@ function OpenAI() {
         message: messages,
       }),
     });
+
+    // Add the AI's response to the chat log
     const data = await response.json();
     setChatLog([...chatLogNew, { user: "gpt", message: `${data.message}` }]);
     console.log(data.message);
@@ -99,6 +105,7 @@ function OpenAI() {
   );
 }
 
+// Functional component to display chat messages
 const ChatMessage = ({ message }) => {
   return (
     <div className={`chat-message ${message.user === "gpt" && "chatgpt"}`}>
