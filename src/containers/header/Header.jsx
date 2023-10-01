@@ -1,6 +1,5 @@
 import React from "react";
 import "./header.css";
-import people from "../../assets/people.png";
 import p111 from "../../assets/p111.png";
 
 const Header = () => {
@@ -27,10 +26,6 @@ const Header = () => {
         <div className="gpt3__header-content__input">
           <input type="email" placeholder="Enter Your Email" />
           <button type="button">Get Early Access</button>
-        </div>
-        <div className="gpt3__header-content__people">
-          <img src={people} alt="people" />
-          <p>2,000,000 people have signed up for Early Access</p>
         </div>
       </div>
       <div className="gpt3__header-image">
