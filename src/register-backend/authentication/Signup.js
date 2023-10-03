@@ -1,43 +1,43 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
-// import { useAuth } from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 import "./signup.css";
 
 export default function Signup() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  // const { signup } = useAuth();
+  const { signup } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  // const history = useHistory();
+  const navigate = useNavigate();
 
-  // async function handleSubmit(e) {
-  //   e.preventDefault();
+  async function handleSubmit(e) {
+    e.preventDefault();
 
-  //   if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-  //     return setError("Passwords do not match");
-  //   }
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError("Passwords do not match");
+    }
 
-  //   try {
-  //     setError("");
-  //     setLoading(true);
-  //     await signup(emailRef.current.value, passwordRef.current.value);
-  //     history.push("/");
-  //   } catch {
-  //     setError("Failed to create an account");
-  //   }
+    try {
+      setError("");
+      setLoading(true);
+      await signup(emailRef.current.value, passwordRef.current.value);
+      navigate("/");
+    } catch (error) {
+      setError("Failed to create an account: " + error.message);
+    }
 
-  //   setLoading(false);
-  // }
+    setLoading(false);
+  }
 
   return (
     <div className="page-container">
       <div className="signup-container">
         <h2 className="signup-header">Register</h2>
         {error && <div className="alert alert-danger">{error}</div>}
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-group" id="email">
             <label>Email</label>
             <input

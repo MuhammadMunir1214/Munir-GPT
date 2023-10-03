@@ -6,6 +6,7 @@ import "./App.css";
 import Pdf from "./containers/pdf/Pdf";
 import OpenAI from "./containers/openAI/OpenAI";
 import Signup from "./register-backend/authentication/Signup";
+// import AuthContextProvider from "./register-backend/context/AuthContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
