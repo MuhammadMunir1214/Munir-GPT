@@ -1,0 +1,81 @@
+.page-container {
+  background: radial-gradient(
+    ellipse 90% 100% at center top,
+    #040c18 0%,
+    rgba(45, 107, 103, 1) 180%
+  );
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form container */
+.signup-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  margin: 20px;
+}
+
+/* Form header */
+.signup-header {
+  color: rgba(45, 107, 103, 1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #d0d0d0;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border-color: rgba(45, 107, 103, 1);
+}
+
+/* Submit button */
+.signup-button {
+  background-color: rgba(45, 107, 103, 1);
+  border: none;
+  color: white;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.signup-button:hover {
+  background: #4df5af;
+  color: #050801;
+  box-shadow: 0 0 5px #4df5af, 0 0 25px #4df5af, 0 0 50px #4df5af,
+    0 0 200px #4df5af;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* Link */
+.login-link a {
+  color: #008cff;
+}
+
+.login-link a:hover {
+  text-decoration: none;
+  color: rgba(45, 107, 103, 1);
+}

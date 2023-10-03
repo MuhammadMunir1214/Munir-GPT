@@ -9,8 +9,6 @@ const Menu = () => {
     <>
       <p>
         <a href="#home">Home</a>
-        {/* <Link to="/home">Home</Link> */}
-        {/* <a onClick={() => navigate("/#home")}>Home</a> */}
       </p>
       <p>
         <a href="#wgpt3">What is GPT?</a>
