@@ -78,6 +78,24 @@
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
+.gpt3__navbar-login {
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.gpt3__navbar-login:hover {
+  color: #4df5af;
+  transition: 0.3s;
+}
+
 .gpt3__navbar-menu {
   margin: 1rem;
   display: none;

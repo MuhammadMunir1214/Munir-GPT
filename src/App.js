@@ -6,20 +6,18 @@ import AuthContextProvider from "./register-backend/context/AuthContext";
 
 const App = () => {
   return (
-    <AuthProvider>
-      <div className="App">
-        <div className="gradient_bg">
-          <Navbar />
-          <Header />
-        </div>
-        <Brand />
-        <WhatGPT3 />
-        <Features />
-        {/* <OpenAI /> */}
-        {/* <Pdf /> */}
-        <Footer />
+    <div className="App">
+      <div className="gradient_bg">
+        <Navbar />
+        <Header />
       </div>
-    </AuthProvider>
+      <Brand />
+      <WhatGPT3 />
+      <Features />
+      {/* <OpenAI /> */}
+      {/* <Pdf /> */}
+      <Footer />
+    </div>
   );
 };
 
