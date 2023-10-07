@@ -3,7 +3,7 @@ Node.js is used to run the server
 Express.js is used to define routes, handle HTTP requests, and set up middleware for parsing request bodies and enabling CORS.
 */
 
-require("dotenv").config({ path: ".env.gpt" });
+require("dotenv").config({ path: "./.env.gpt" });
 const cors = require("cors");
 const OpenAI = require("openai");
 const express = require("express");
