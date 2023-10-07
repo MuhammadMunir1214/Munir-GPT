@@ -43,14 +43,3 @@ app.post("/openAI", async (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
-
-// app.get("/openAI/models", async (req, res) => {
-//   const response = await openai.models.list();
-
-//   for await (const model of response) {
-//     console.log(model);
-//   }
-//   res.json({
-//     models: response.data.data,
-//   });
-// });

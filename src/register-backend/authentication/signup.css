@@ -10,7 +10,6 @@
   justify-content: center;
 }
 
-/* Form container */
 .signup-container {
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
@@ -21,21 +20,18 @@
   margin: 20px;
 }
 
-/* Form header */
 .signup-header {
   color: rgba(45, 107, 103, 1);
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Labels */
 label {
   font-weight: 500;
   margin-bottom: 5px;
   display: block;
 }
 
-/* Inputs */
 input {
   width: 100%;
   padding: 10px;
@@ -49,7 +45,6 @@ input:focus {
   border-color: rgba(45, 107, 103, 1);
 }
 
-/* Submit button */
 .signup-button {
   background-color: rgba(45, 107, 103, 1);
   border: none;
@@ -70,7 +65,6 @@ input:focus {
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
-/* Link */
 .login-link a {
   color: #008cff;
 }

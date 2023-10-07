@@ -1,8 +1,6 @@
 import React from "react";
-import { CTA, Brand, Navbar } from "./components";
-import { Footer, Pdf, OpenAI, Features, WhatGPT3, Header } from "./containers";
-import { AuthProvider } from "./register-backend/context/AuthContext";
-import AuthContextProvider from "./register-backend/context/AuthContext";
+import { Brand, Navbar } from "./components";
+import { Footer, Features, WhatGPT3, Header } from "./containers";
 
 const App = () => {
   return (
@@ -14,8 +12,6 @@ const App = () => {
       <Brand />
       <WhatGPT3 />
       <Features />
-      {/* <OpenAI /> */}
-      {/* <Pdf /> */}
       <Footer />
     </div>
   );

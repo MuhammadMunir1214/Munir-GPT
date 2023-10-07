@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 import p111 from "../../assets/p111.png";
 
 const Header = () => {
@@ -25,7 +26,11 @@ const Header = () => {
         </p3>
         <div className="gpt3__header-content__input">
           <input type="email" placeholder="Enter Your Email" />
-          <button type="button">Get Early Access</button>
+          <Link to="/register" target="_blank">
+            <button type="button">
+              Get Early <br /> Access
+            </button>
+          </Link>
         </div>
       </div>
       <div className="gpt3__header-image">
