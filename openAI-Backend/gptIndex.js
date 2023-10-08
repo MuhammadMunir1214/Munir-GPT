@@ -42,6 +42,15 @@ app.post("/openAI", async (req, res) => {
   });
 });
 
+//Health get API
+app.get("/health", async (req, res) => {
+  //   console.log(completion);
+  //Responds to the client side with the generated AI response
+  res.json({
+    message: "The openAI backen is up and running!",
+  });
+});
+
 //For testing: starts the Express.js server
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
