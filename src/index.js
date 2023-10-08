@@ -25,7 +25,7 @@ ReactDOM.render(
           }
         />
         <Route
-          path="openAI"
+          path="https://munir-openai.onrender.com/openAI"
           element={
             <PrivateRoute>
               <OpenAI />

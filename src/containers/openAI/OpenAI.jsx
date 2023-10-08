@@ -31,7 +31,7 @@ function OpenAI() {
   }
 
   // function getEngines() {
-  //   fetch("http://localhost:3001/openAI/models")
+  //   fetch("https://munir-openai.onrender.com/openAI/models")
   //     .then((response) => response.json())
   //     .then((data) => setModels(data.models.data));
   // }
@@ -48,7 +48,7 @@ function OpenAI() {
     const messages = chatLogNew.map((message) => message.message).join("\n");
 
     // Send user's input to the server and receive a response
-    const response = await fetch("http://localhost:3001/openAI", {
+    const response = await fetch("https://munir-openai.onrender.com/openAI", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

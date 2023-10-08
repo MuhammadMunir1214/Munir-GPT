@@ -18,7 +18,11 @@ const Menu = () => {
         <a href="#features">Features</a>
       </p>
       <p>
-        <Link to="/openAI" target="_blank">
+        <Link
+          to="https://munir-openai.onrender.com/openAI"
+          target="_blank"
+          rel="noreferrer"
+        >
           Open AI
         </Link>
       </p>
@@ -54,7 +58,7 @@ const Navbar = () => {
 
     try {
       await logout();
-      navigate("/login");
+      navigate("/");
     } catch {
       setError("Failed to log out");
     }
