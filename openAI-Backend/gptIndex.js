@@ -16,8 +16,6 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-console.log("api key: ", openai.apiKey);
-
 const app = express(); //Create an Express.js application(Node.js framework)
 app.use(bodyParser.json()); //Parse JSON request bodies (middleware function)
 app.use(cors()); //Enable CORS for cross-origin requests (middleware function)
@@ -35,7 +33,6 @@ app.post("/openAI", async (req, res) => {
     temperature: 0.5, //This controls the randomness of the response (0.5 is a moderate level)
   });
 
-  //   console.log(completion);
   //Responds to the client side with the generated AI response
   res.json({
     message: completion.choices[0].text,
@@ -44,7 +41,6 @@ app.post("/openAI", async (req, res) => {
 
 //Health get API
 app.get("/health", async (req, res) => {
-  //   console.log(completion);
   //Responds to the client side with the generated AI response
   res.json({
     message: "The openAI backen is up and running!",
