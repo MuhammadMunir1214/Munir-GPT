@@ -45,7 +45,6 @@
       "react-app",
       "react-app/jest"
     ]
-    
   },
   "browserslist": {
     "production": [
@@ -61,6 +60,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "netlify-cli": "^16.5.1",
     "nodemon": "^3.0.1"
   }
 }
