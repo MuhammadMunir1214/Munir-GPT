@@ -51,7 +51,7 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
     setToggleMenu(false);
-  };
+  }; // eslint-disable-line react-hooks/exhaustive-deps
 
   async function handleLogout() {
     setError("");

@@ -10,7 +10,7 @@ function OpenAI() {
 
   const chatLogContainerRef = useRef(); // Ref to scroll to the bottom of the chat log
   const [input, setInput] = useState(""); // State to manage user input
-  const [models, setModels] = useState([]);
+  // const [models, setModels] = useState([]); // eslint-disable-line react-hooks/exhaustive-deps
   const [chatLog, setChatLog] = useState([
     { user: "gpt", message: "Hello, how can I help you today?" }, // State to manage the chat log
   ]);
