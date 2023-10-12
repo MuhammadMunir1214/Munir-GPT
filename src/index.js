@@ -25,7 +25,7 @@ ReactDOM.render(
           }
         />
         <Route
-          path="https://munir-openai.onrender.com/openAI"
+          path="openAI"
           element={
             <PrivateRoute>
               <OpenAI />
@@ -34,6 +34,7 @@ ReactDOM.render(
         />
         <Route path="register" element={<Signup />} />
         <Route path="login" element={<Login />} />
+        {/* <Route path="home" element={<Home />} /> */}
       </Routes>
     </AuthProvider>
   </Router>,

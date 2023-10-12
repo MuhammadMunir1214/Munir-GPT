@@ -18,11 +18,7 @@ const Menu = () => {
         <a href="#features">Features</a>
       </p>
       <p>
-        <Link
-          to="https://munir-openai.onrender.com/openAI"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link to="/openAI" target="_blank">
           Open AI
         </Link>
       </p>
@@ -51,14 +47,14 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
     setToggleMenu(false);
-  }; // eslint-disable-line react-hooks/exhaustive-deps
+  };
 
   async function handleLogout() {
     setError("");
 
     try {
       await logout();
-      navigate("/");
+      navigate("/login");
     } catch {
       setError("Failed to log out");
     }
