@@ -11,10 +11,11 @@ Munir-GPT is versatile web application that leverages OpenAI's language model an
 The programming languages used were **JavaScript(React.js)** and **Python.** It is a fully functional website with user authentication as well. 
 
 # Libraries and Frameworks
--**Node.js**
--**Express.js**
--**LangChain**
--**Axios**
--**OpenAI API**
--**OAuth 2.0**
--**JSON Web Token(JWT)**
+-**Node.js**    
+-**Express.js**   
+-**LangChain**   
+-**Axios**   
+-**OpenAI API**   
+-**OAuth 2.0**   
+-**JSON Web Token(JWT)**   
+
